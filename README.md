@@ -8,4 +8,4 @@ Live site: https://x1012619000-tech.github.io/dragonfly-realtime/
 - `worker/` — Cloudflare Worker data API (`/api/snapshot`, `/api/ingest`) — see `worker/README.md`
 - `API.md` — field-by-field data spec (EN + 中文)
 
-Credits: three.js (MIT), world-atlas / Natural Earth (public domain), Rajdhani / Oxanium / Share Tech Mono (SIL OFL).
+Credits: three.js (MIT); Earth texture derived (greyscale) from NASA Blue Marble imagery (public domain, via three-globe examples); world-atlas / Natural Earth (public domain); Chakra Petch, Rajdhani, Share Tech Mono (SIL OFL); DSEG7 by keshikan (SIL OFL, see docs/fonts/DSEG-LICENSE.txt).
