@@ -235,7 +235,7 @@ html[lang=zh] .ro-l{letter-spacing:.14em}
 .ro-v{display:flex;gap:3px;font-family:var(--mono);font-size:26px;color:var(--bright)}
 .ro-v .d{position:relative;width:24px;height:38px;border:1px solid var(--line2);background:linear-gradient(180deg,rgba(220,228,236,.07),rgba(4,5,6,.7));overflow:hidden;display:block}
 .ro-v .d::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.6)}
-.ro-v .d .reel{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;transition:transform .7s cubic-bezier(.3,1.3,.5,1)}
+.ro-v .d .reel{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.2,.9,.3,1)}
 .ro-v .d .reel span{height:38px;line-height:38px;text-align:center}
 .ro-v .s{width:9px;text-align:center;line-height:38px;color:var(--dim)}
 .ro-main .ro-v .d{width:28px;height:44px}.ro-main .ro-v .d .reel span{height:44px;line-height:44px;font-size:30px}.ro-main .ro-v .s{line-height:44px}
