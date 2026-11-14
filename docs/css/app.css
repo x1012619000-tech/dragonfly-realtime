@@ -247,16 +247,9 @@ html[lang=zh] .ro-l{letter-spacing:.14em}
 .globe-wrap{position:absolute;left:0;right:0;top:126px;bottom:38px}
 #globe{position:absolute;inset:0;width:100%;height:100%;cursor:grab;display:block}
 #globe:active{cursor:grabbing}
-.rings{position:absolute;left:50%;top:50%;width:800px;height:800px;margin:-400px 0 0 -400px;pointer-events:none}
+.rings{position:absolute;left:50%;top:50%;width:900px;height:900px;margin:-450px 0 0 -450px;pointer-events:none}
 .hub-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hub{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;transform:translate(-50%,-50%);width:22px;height:22px}
-.hub svg{width:22px;height:22px;display:block;overflow:visible}
-.hub .lb{position:absolute;left:16px;top:-12px;font-family:var(--mono);font-size:10.5px;color:var(--fg);white-space:nowrap;letter-spacing:.06em;text-shadow:0 0 4px #000,0 0 8px #000;pointer-events:none}
-.hub .lb em{font-style:normal;color:var(--dim);margin-left:4px}
-.hub.minor .lb{display:none}
-.hub.net svg{opacity:.65}
-.hub:hover .lb,.hub.sel .lb{color:var(--bright);display:block}
-.hub.sel svg .rt{stroke:#fff}
 .pop{position:absolute;z-index:5;width:250px;padding:0;background:rgba(10,12,15,.92);border:1px solid var(--line3);box-shadow:0 0 30px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.6);font-size:13px;backdrop-filter:blur(4px)}
 .pop::before{content:"";position:absolute;left:-1px;top:-1px;width:14px;height:14px;border-left:2px solid #fff;border-top:2px solid #fff}
 .pop .pp-h{display:flex;align-items:center;gap:8px;height:32px;padding:0 6px 0 10px;border-bottom:1px solid var(--line2);background:linear-gradient(90deg,rgba(220,228,236,.14),transparent)}

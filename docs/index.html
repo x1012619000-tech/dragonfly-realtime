@@ -8,6 +8,7 @@
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/v2.css">
 <script src="js/config.js"></script>
 <script src="js/seed.js"></script>
 <script src="js/i18n.js"></script>
@@ -23,11 +24,11 @@
     <svg class="hdr-frame" viewBox="0 0 1920 84" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="#cfd6dc" stop-opacity="0"/><stop offset=".25" stop-color="#cfd6dc" stop-opacity=".35"/><stop offset=".5" stop-color="#eef1f3" stop-opacity=".9"/><stop offset=".75" stop-color="#cfd6dc" stop-opacity=".35"/><stop offset="1" stop-color="#cfd6dc" stop-opacity="0"/></linearGradient>
-        <linearGradient id="hf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#aab6c2" stop-opacity=".10"/><stop offset="1" stop-color="#aab6c2" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34383d"/><stop offset=".5" stop-color="#1c1f22"/><stop offset="1" stop-color="#121416" stop-opacity=".9"/></linearGradient>
       </defs>
       <path d="M0 60 H640 L672 78 H1248 L1280 60 H1920" fill="none" stroke="url(#hl)" stroke-width="1"/>
       <path d="M640 60 L672 78 H1248 L1280 60 L1250 4 H670 Z" fill="url(#hf)"/>
-      <path d="M670 4 H1250" stroke="#cfd6dc" stroke-opacity=".18"/>
+      <path d="M670 4 H1250" stroke="#eef1f3" stroke-opacity=".35"/><path d="M640 60 L670 4 M1280 60 L1250 4" stroke="#cfd6dc" stroke-opacity=".3"/><path d="M1238 4 h12 l-6 10z" fill="#d2a35c"/>
       <path d="M690 82 H760 M1160 82 H1230" stroke="#e8ecef" stroke-opacity=".7" stroke-width="2"/>
       <g fill="#cfd6dc" fill-opacity=".5">
         <rect x="560" y="57" width="18" height="6"/><rect x="584" y="57" width="10" height="6" fill-opacity=".3"/><rect x="600" y="57" width="6" height="6" fill-opacity=".18"/>
@@ -60,10 +61,10 @@
       <header class="ph"><span class="idx">01</span><span class="pt" data-i18n="z1"></span><span class="chev">&gt;&gt;</span><span class="ps" data-i18n="z1s"></span><span class="pill"><i></i><span data-i18n="executing"></span></span></header>
       <div class="pb">
         <div class="kpis">
-          <div class="kpi"><div class="kl" data-i18n="capitalPool"></div><div class="kv gold" id="k_pool"></div><div class="kd" id="k_pool_d"></div></div>
-          <div class="kpi"><div class="kl" data-i18n="monthlyProcurement"></div><div class="kv gold" id="k_proc"></div><div class="kd" id="k_proc_d"></div></div>
-          <div class="kpi"><div class="kl" data-i18n="turnover"></div><div class="kv" id="k_turn"></div><div class="kd" id="k_turn_d"></div></div>
-          <div class="kpi"><div class="kl" data-i18n="activeRoutes"></div><div class="kv" id="k_routes"></div><div class="kd" id="k_routes_d"></div></div>
+          <div class="kpi"><div class="kl" data-i18n="capitalPool"></div><div class="kv gold sg" id="k_pool"></div><div class="kd" id="k_pool_d"></div></div>
+          <div class="kpi"><div class="kl" data-i18n="monthlyProcurement"></div><div class="kv gold sg" id="k_proc"></div><div class="kd" id="k_proc_d"></div></div>
+          <div class="kpi"><div class="kl" data-i18n="turnover"></div><div class="kv sg" id="k_turn"></div><div class="kd" id="k_turn_d"></div></div>
+          <div class="kpi"><div class="kl" data-i18n="activeRoutes"></div><div class="kv sg" id="k_routes"></div><div class="kd" id="k_routes_d"></div></div>
         </div>
         <div class="flow" id="flow1"></div>
         <div class="z1-today"><span class="tag" data-i18n="onchainToday"></span><span class="z1-sum"><b class="gold mono" id="z1Amt">$27K</b> · <b class="mono" id="z1Tix">226</b> <span data-i18n="tickets"></span></span></div>
@@ -82,13 +83,13 @@
         <form class="q" id="q2"><span class="q-pre mono">0x</span><input id="q2in" class="mono" spellcheck="false" autocomplete="off"><button type="submit" data-i18n="query"></button></form>
         <div class="meta2 mono"><span id="z2Net">BASE Mainnet</span> · <span data-i18n="block"></span> #<span id="z2Blk"></span> · <span data-i18n="lastSettle"></span> <span id="z2Last"></span> <span data-i18n="minAgo"></span></div>
         <div class="z2-main">
-          <div><div class="kl" data-i18n="todayTotal"></div><div class="big gold mono"><span id="z2Total"></span> <small>USDC</small></div></div>
+          <div><div class="kl" data-i18n="todayTotal"></div><div class="big gold mono"><span id="z2Total" class="sg"></span> <small>USDC</small></div></div>
           <div class="z2-root"><div class="kl" data-i18n="root"></div><div class="mono"><span id="z2Root" class="hl"></span> <a class="btn-s" id="z2Verify" target="_blank" rel="noopener" data-i18n="verify"></a></div></div>
         </div>
         <div class="cells3">
-          <div class="cell"><div class="kl" data-i18n="settledTickets"></div><div class="cv mono" id="z2Tix"></div></div>
-          <div class="cell"><div class="kl" data-i18n="liquidity"></div><div class="cv mono gold" id="z2Liq"></div></div>
-          <div class="cell"><div class="kl" data-i18n="inFlight"></div><div class="cv mono" id="z2Fly"></div></div>
+          <div class="cell"><div class="kl" data-i18n="settledTickets"></div><div class="cv mono sg" id="z2Tix"></div></div>
+          <div class="cell"><div class="kl" data-i18n="liquidity"></div><div class="cv mono gold sg" id="z2Liq"></div></div>
+          <div class="cell"><div class="kl" data-i18n="inFlight"></div><div class="cv mono sg" id="z2Fly"></div></div>
         </div>
       </div>
     </section>
@@ -107,8 +108,8 @@
         <div class="z4-top"><span><b data-i18n="today"></b> / <span data-i18n="committedOnchain"></span></span><span class="tagbox mono" id="z4Algo">keccak256</span></div>
         <div class="hashline mono" id="z4Root"></div>
         <div class="z4-stats">
-          <div><div class="kl" data-i18n="ordersCommitted"></div><div class="cv mono" id="z4Orders"></div></div>
-          <div><div class="kl" data-i18n="anchored"></div><div class="cv mono" id="z4Blk"></div></div>
+          <div><div class="kl" data-i18n="ordersCommitted"></div><div class="cv mono sg" id="z4Orders"></div></div>
+          <div><div class="kl" data-i18n="anchored"></div><div class="cv mono sg" id="z4Blk"></div></div>
           <a class="btn" id="z4Verify" target="_blank" rel="noopener"><span data-i18n="verifyRoot"></span> ↗</a>
         </div>
         <p class="note" data-i18n="commitNote"></p>
@@ -119,34 +120,40 @@
   <!-- ============ CENTRE ============ -->
   <div class="center" id="center">
     <div class="readouts">
-      <div class="ro"><div class="ro-l" data-i18n="blockHeight"></div><div class="ro-v" id="roBlock"></div></div>
-      <div class="ro ro-main"><div class="ro-l" data-i18n="todayUsdc"></div><div class="ro-v gold" id="roToday"></div></div>
-      <div class="ro"><div class="ro-l" data-i18n="settleTime"></div><div class="ro-v" id="roTime"></div></div>
+      <div class="ro"><div class="ro-l"><span class="chip">◧</span><span data-i18n="blockHeight"></span></div><div class="ro-v" id="roBlock"></div><div class="rbar"><i style="width:72%"></i><b></b></div></div>
+      <div class="ro ro-main"><div class="ro-l"><span class="chip">$</span><span data-i18n="todayUsdc"></span></div><div class="ro-v gold" id="roToday"></div><div class="rbar"><i id="roTodayBar" style="width:54%"></i><b></b></div></div>
+      <div class="ro"><div class="ro-l"><span class="chip">◷</span><span data-i18n="settleTime"></span></div><div class="ro-v" id="roTime"></div><div class="rbar"><i id="roTimeBar" style="width:40%"></i><b></b></div></div>
     </div>
     <div class="tabs" id="tabs">
-      <button data-r="global" class="on" data-i18n="tabGlobal"></button><button data-r="asia" data-i18n="tabAsia"></button><button data-r="eurasia" data-i18n="tabEurasia"></button><button data-r="west" data-i18n="tabWest"></button>
+      <button data-r="global" class="on"><span class="ic"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor"/><path d="M2.5 8h11M8 2.5c-2.5 3-2.5 8 0 11M8 2.5c2.5 3 2.5 8 0 11" fill="none" stroke="currentColor"/></svg></span><span data-i18n="tabGlobal"></span></button>
+      <button data-r="asia"><span class="ic"><svg viewBox="0 0 16 16"><path d="M3 12 8 3l5 9z" fill="none" stroke="currentColor"/></svg></span><span data-i18n="tabAsia"></span></button>
+      <button data-r="eurasia"><span class="ic"><svg viewBox="0 0 16 16"><path d="M2 8h12M10 4l4 4-4 4" fill="none" stroke="currentColor"/></svg></span><span data-i18n="tabEurasia"></span></button>
+      <button data-r="west"><span class="ic"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" fill="none" stroke="currentColor"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/></svg></span><span data-i18n="tabWest"></span></button>
     </div>
     <div class="globe-wrap" id="globeWrap">
       <canvas id="globe"></canvas>
-      <svg class="rings" id="rings" viewBox="-400 -400 800 800" aria-hidden="true"></svg>
+      <svg class="rings" id="rings" viewBox="-450 -450 900 900" aria-hidden="true"></svg>
       <div class="hub-layer" id="hubLayer"></div>
       <div class="pop" id="pop" hidden></div>
     </div>
     <div class="c-side c-left">
-      <div class="mini"><div class="ro-l" data-i18n="hubs"></div><div class="mini-v mono" id="cHubs">24</div></div>
-      <div class="mini"><div class="ro-l" data-i18n="arcs"></div><div class="mini-v mono" id="cArcs">0</div></div>
-      <div class="mini"><div class="ro-l" data-i18n="coverage"></div><div class="mini-v mono" id="cCov">61.72</div><div class="bar"><i id="cCovBar"></i></div></div>
+      <div class="mini"><div class="ro-l" data-i18n="hubs"></div><div class="mini-v mono sg" id="cHubs">24</div></div>
+      <div class="mini"><div class="ro-l" data-i18n="arcs"></div><div class="mini-v mono sg" id="cArcs">0</div></div>
+      <div class="mini"><div class="ro-l" data-i18n="coverage"></div><div class="mini-v mono sg" id="cCov">61.72</div><div class="bar"><i id="cCovBar"></i></div></div>
     </div>
     <div class="c-side c-right">
-      <div class="mini"><div class="ro-l" data-i18n="uptime"></div><div class="mini-v mono" id="cUp">04:18:33:20</div></div>
+      <div class="mini"><div class="ro-l" data-i18n="uptime"></div><div class="mini-v mono sg" id="cUp">04:18:33:20</div></div>
       <div class="mini"><div class="ro-l">LAT / LON</div><div class="mini-v mono sm" id="cLL">31.14N 121.81E</div></div>
       <div class="mini"><div class="ro-l">SYNC</div><div class="mini-v mono sm" id="cSync">T+00</div></div>
     </div>
     <div class="c-foot">
+      <span class="cmd-chip">CMD</span>
+      <span class="cmd-micro">INPUT ▸<br>OUTPUT ▸</span>
       <span class="lg"><i class="lg-a"></i><span data-i18n="legendSettle"></span></span>
       <span class="lg"><i class="lg-b"></i><span data-i18n="legendNet"></span></span>
       <span class="lg"><i class="lg-h"></i><span data-i18n="legendHub"></span></span>
-      <span class="hint mono" data-i18n="dragHint"></span>
+      <span class="hint" data-i18n="dragHint"></span>
+      <span class="cmd-code">DF-08</span>
     </div>
   </div>
 
@@ -164,9 +171,9 @@
           <div class="pn"><div class="pn-i"><svg viewBox="0 0 24 24"><path d="M2 14l20-6-2-2-7 2-6-4-2 1 4 5-5 1.5-2-1.5-1 .5 2 3z M4 19h16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div class="pn-t" data-i18n="airline"></div><div class="pn-s" data-i18n="bspCarrier"></div></div>
         </div>
         <div class="rows5">
-          <div class="r5"><div><b data-i18n="fundsIn"></b><span data-i18n="fundsInD"></span></div><div class="mono gold" id="z5In"></div></div>
-          <div class="r5"><div><b data-i18n="netRelease"></b><span data-i18n="netReleaseD"></span></div><div class="mono gold" id="z5Out"></div></div>
-          <div class="r5"><div><b data-i18n="reserve"></b><span data-i18n="reserveD"></span></div><div class="mono" id="z5Res"></div></div>
+          <div class="r5"><div><b data-i18n="fundsIn"></b><span data-i18n="fundsInD"></span></div><div class="mono gold sg" id="z5In"></div></div>
+          <div class="r5"><div><b data-i18n="netRelease"></b><span data-i18n="netReleaseD"></span></div><div class="mono gold sg" id="z5Out"></div></div>
+          <div class="r5"><div><b data-i18n="reserve"></b><span data-i18n="reserveD"></span></div><div class="mono sg" id="z5Res"></div></div>
         </div>
       </div>
     </section>
@@ -177,10 +184,10 @@
         <div class="bars" id="bars"></div>
         <div class="subh"><span class="tag2" data-i18n="z6b"></span><span class="chev">&gt;&gt;</span><span class="ps" data-i18n="z6bs"></span><span class="rule"></span></div>
         <div class="metrics">
-          <div class="m"><div class="kl" data-i18n="cumulative"></div><div class="mv gold mono" id="m_cum"></div><div class="ms mono">USDC</div></div>
-          <div class="m"><div class="kl" data-i18n="avgTime"></div><div class="mv mono" id="m_avg"></div><div class="ms" data-i18n="avgTimeD"></div></div>
-          <div class="m"><div class="kl" data-i18n="settledRoutes"></div><div class="mv mono" id="m_routes"></div><div class="ms" data-i18n="msRoutes"></div></div>
-          <div class="m"><div class="kl" data-i18n="refundRate"></div><div class="mv mono" id="m_ref"></div><div class="ms" data-i18n="msRefund"></div></div>
+          <div class="m"><div class="kl" data-i18n="cumulative"></div><div class="mv gold mono sg" id="m_cum"></div><div class="ms mono">USDC</div></div>
+          <div class="m"><div class="kl" data-i18n="avgTime"></div><div class="mv mono sg" id="m_avg"></div><div class="ms" data-i18n="avgTimeD"></div></div>
+          <div class="m"><div class="kl" data-i18n="settledRoutes"></div><div class="mv mono sg" id="m_routes"></div><div class="ms" data-i18n="msRoutes"></div></div>
+          <div class="m"><div class="kl" data-i18n="refundRate"></div><div class="mv mono sg" id="m_ref"></div><div class="ms" data-i18n="msRefund"></div></div>
         </div>
       </div>
     </section>
