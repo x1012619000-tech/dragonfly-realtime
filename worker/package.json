@@ -1,0 +1,11 @@
+{
+  "name": "dragonfly-realtime-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node scripts/build-seed.mjs",
+    "dev": "wrangler dev",
+    "deploy": "node scripts/build-seed.mjs && wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

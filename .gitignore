@@ -1,0 +1,6 @@
+shots/
+ref/
+shoot.mjs
+node_modules/
+.wrangler/
+.dev.vars

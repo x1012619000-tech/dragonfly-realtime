@@ -1,0 +1,17 @@
+name = "dragonfly-realtime-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+ALLOW_ORIGIN = "*"          # tighten to "https://x1012619000-tech.github.io" in production
+CACHE_TTL = "10"
+# UPSTREAM_URLS = '{"*":"https://your-backend.example.com/dragonfly/snapshot"}'
+
+# Optional: persist pushed data (POST /api/ingest) across isolates.
+# 1) npx wrangler kv namespace create DFLY_KV   2) paste the id below and uncomment
+# [[kv_namespaces]]
+# binding = "DFLY_KV"
+# id = "<your-kv-namespace-id>"
+
+# Secrets (never commit): npx wrangler secret put INGEST_TOKEN
+#                          npx wrangler secret put UPSTREAM_AUTH   (optional)

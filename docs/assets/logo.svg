@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#e6e9ec" stroke-linecap="round" stroke-linejoin="round">
+  <defs><filter id="g" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g filter="url(#g)">
+    <!-- wings: calligraphic loops -->
+    <path stroke-width="2.4" d="M58 38 C44 26 22 20 9 25 C3 28 6 35 16 37 C30 40 46 41 57 41"/>
+    <path stroke-width="1.6" d="M57 44 C44 47 27 55 17 63 C12 68 17 72 25 68 C36 62 48 53 57 47"/>
+    <path stroke-width="2.4" d="M62 38 C76 26 98 20 111 25 C117 28 114 35 104 37 C90 40 74 41 63 41"/>
+    <path stroke-width="1.6" d="M63 44 C76 47 93 55 103 63 C108 68 103 72 95 68 C84 62 72 53 63 47"/>
+    <!-- wing veins -->
+    <path stroke-width=".8" opacity=".6" d="M54 39 C40 32 24 28 13 29 M54 45 C42 51 30 58 21 66 M66 39 C80 32 96 28 107 29 M66 45 C78 51 90 58 99 66"/>
+    <!-- head + thorax -->
+    <circle cx="60" cy="27" r="4.2" stroke-width="2"/>
+    <path stroke-width="2.6" d="M60 32 C56 36 56 44 60 49 C64 44 64 36 60 32Z"/>
+    <!-- abdomen: brush stroke tapering -->
+    <path stroke-width="2.8" d="M60 50 C60.6 66 60.4 84 59.6 98"/>
+    <path stroke-width="1.4" d="M59.6 98 C59.2 104 58.4 109 57.2 113"/>
+    <path stroke-width="1" opacity=".55" d="M57.6 60h5 M57.8 70h4.6 M57.9 80h4.2 M58 90h3.6"/>
+  </g>
+</svg>
