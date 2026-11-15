@@ -1,10 +1,10 @@
 // AUTO-GENERATED from docs/js/seed.js — run `node scripts/build-seed.mjs`
 export default {
-  "schema": 1,
+  "schema": 3,
   "meta": {
     "network": "BASE Mainnet",
     "chainId": 8453,
-    "block": 57216761,
+    "block": 57645446,
     "explorer": "https://basescan.org",
     "location": {
       "en": "Shanghai",
@@ -13,235 +13,269 @@ export default {
     "timezone": "Asia/Shanghai"
   },
   "supplyChain": {
-    "status": "executing",
+    "status": "running",
     "kpis": {
       "capitalPool": {
         "value": 10800000,
         "share": 0.36
       },
       "monthlyProcurement": {
-        "value": 2300000,
-        "delta": 0.417
+        "value": 2400000,
+        "delta": 0.402
       },
       "turnover": {
         "value": 0.94,
         "delta": 0.084
       },
       "activeRoutes": {
-        "value": 1623,
-        "delta": -0.184
+        "value": 1649,
+        "delta": -0.193
       }
-    },
-    "flow": [
-      "usdc",
-      "osl",
-      "procurement",
-      "distribution",
-      "recycle"
-    ],
-    "today": {
-      "amount": 27000,
-      "tickets": 226
-    },
-    "ticker": [
-      {
-        "from": "PVG",
-        "to": "XIY",
-        "amount": 87,
-        "tx": "0x130b…ca11",
-        "block": 57216710,
-        "ageMin": 3
-      },
-      {
-        "from": "CTU",
-        "to": "PVG",
-        "amount": 95,
-        "tx": "0x5abe…f563",
-        "block": 57216677,
-        "ageMin": 3
-      },
-      {
-        "from": "KWE",
-        "to": "JHG",
-        "amount": 65.08,
-        "tx": "0x1eb3…7ade",
-        "block": 57216652,
-        "ageMin": 4
-      },
-      {
-        "from": "URC",
-        "to": "XIY",
-        "amount": 118,
-        "tx": "0x9c40…21fd",
-        "block": 57216611,
-        "ageMin": 5
-      },
-      {
-        "from": "ICN",
-        "to": "SZX",
-        "amount": 156,
-        "tx": "0x77e2…0b9a",
-        "block": 57216570,
-        "ageMin": 6
-      }
-    ],
-    "dailyRoot": {
-      "hash": "0xa60c…76ca",
-      "block": 57216761
     }
-  },
-  "liquidity": {
-    "queryHash": "0xa7ff2c74ff76010e0d5c4bdbb0de9b7709274749629865c33902a7954f6948d5",
-    "block": 57216761,
-    "lastSettlementMin": 4,
-    "todayTotal": 26979.26,
-    "root": "0xa7ff…48d5",
-    "settledTickets": 120494,
-    "liquidity": 10800000,
-    "inFlight": 12
   },
   "feed": [
     {
-      "from": "VKO",
-      "to": "LED",
-      "amount": 101.26,
-      "tx": "0xa3bb…878e",
-      "block": 57212472,
-      "ageMin": 18,
-      "featured": true
+      "from": "CGK",
+      "to": "CAN",
+      "amount": 124.79,
+      "tx": "0x0076…54f0",
+      "block": 57645422,
+      "ageMin": 2
     },
     {
-      "from": "KUL",
-      "to": "CGK",
-      "amount": 80.41,
-      "tx": "0xefc3…bc20",
-      "block": 57212457,
-      "ageMin": 18
+      "from": "TFU",
+      "to": "HIA",
+      "amount": 130.3,
+      "tx": "0x886b…fe48",
+      "block": 57645446,
+      "ageMin": 1
     },
     {
-      "from": "KWE",
-      "to": "JHG",
-      "amount": 65.08,
-      "tx": "0x1eb3…7ade",
-      "block": 57216761,
-      "ageMin": 4
+      "from": "CAN",
+      "to": "XIY",
+      "amount": 99.16,
+      "tx": "0xf250…2aa2",
+      "block": 57645079,
+      "ageMin": 3
+    },
+    {
+      "from": "EVN",
+      "to": "SVO",
+      "amount": 165.3,
+      "tx": "0x869b…ffbf",
+      "block": 57618444,
+      "ageMin": 60
+    },
+    {
+      "from": "CGK",
+      "to": "CAN",
+      "amount": 199.25,
+      "tx": "0xd2d5…42ae",
+      "block": 57618417,
+      "ageMin": 62
+    },
+    {
+      "from": "SVO",
+      "to": "MMK",
+      "amount": 177.81,
+      "tx": "0xcb84…6d2b",
+      "block": 57618381,
+      "ageMin": 64
     },
     {
       "from": "SZX",
       "to": "ICN",
       "amount": 156.21,
       "tx": "0x2d78…3767",
-      "block": 57203444,
-      "ageMin": 48
+      "block": 57603444,
+      "ageMin": 88
     },
     {
-      "from": "PVG",
-      "to": "XIY",
-      "amount": 87,
-      "tx": "0x130b…ca11",
-      "block": 57216710,
-      "ageMin": 3
-    },
-    {
-      "from": "CTU",
-      "to": "PVG",
-      "amount": 95,
+      "from": "SHA",
+      "to": "XMN",
+      "amount": 182.4,
       "tx": "0x5abe…f563",
-      "block": 57216677,
-      "ageMin": 3
+      "block": 57601677,
+      "ageMin": 95
     }
   ],
   "commitment": {
     "algo": "keccak256",
     "root": "0xa7ff2c74ff76010e0d5c4bdbb0de9b7709274749629865c33902a7954f6948d5",
-    "ordersCommitted": 226,
-    "anchorBlock": 57216761
+    "ordersCommitted": 449,
+    "anchorBlock": 57645446,
+    "anchorTx": "",
+    "officialWallet": ""
   },
-  "settlementFlow": {
-    "buyer": "OTA platform",
-    "contract": "0xa60c…76ca",
-    "airline": "BSP carrier",
-    "fundsIn": 26979.26,
-    "netRelease": 26979.26,
-    "reserve": 0
+  "overview": {
+    "tvl": {
+      "value": 8200000,
+      "label": "stableVault"
+    },
+    "burned": {
+      "total": 1922670,
+      "note": "partiallyConfirmed",
+      "network": "Base Mainnet"
+    },
+    "activeRoutes": {
+      "value": 1649,
+      "delta": -0.193
+    },
+    "lastWeekBurn": {
+      "value": 59416.378197,
+      "unit": "MXP",
+      "note": "prevWeekUtc"
+    },
+    "apr": {
+      "value": 0.12,
+      "tier": "bronzeFlyer",
+      "note": "centWeighted"
+    }
   },
+  "liquidity": {
+    "todayTotal": 49184,
+    "root": "0xa7ff2c74ff76010e0d5c4bdbb0de9b7709274749629865c33902a7954f6948d5",
+    "settledTickets": 121639,
+    "liquidity": 8200000,
+    "inFlight": 12,
+    "lastSettlementMin": 3
+  },
+  "partners": [
+    {
+      "name": "OSL",
+      "logo": "assets/partners/osl.svg",
+      "role": {
+        "en": "Digital asset rails",
+        "zh": "数字资产通道"
+      },
+      "url": "https://osl.com"
+    },
+    {
+      "name": "IATA",
+      "logo": "assets/partners/iata.svg",
+      "role": {
+        "en": "Air transport association",
+        "zh": "国际航空运输协会"
+      },
+      "url": "https://www.iata.org"
+    },
+    {
+      "name": "Coinbase",
+      "logo": "assets/partners/coinbase.svg",
+      "role": {
+        "en": "Base · USDC network",
+        "zh": "Base · USDC 网络"
+      },
+      "url": "https://www.coinbase.com"
+    },
+    {
+      "name": "HashKey",
+      "logo": "assets/partners/hashkey.png",
+      "role": {
+        "en": "Licensed exchange",
+        "zh": "持牌交易所"
+      },
+      "url": "https://group.hashkey.com"
+    },
+    {
+      "name": "MPChat",
+      "logo": "assets/partners/mpchat.svg",
+      "icon": "assets/partners/mpchat-icon.svg",
+      "role": {
+        "en": "Super-app partner",
+        "zh": "超级应用合作方"
+      },
+      "url": "https://mp.net"
+    }
+  ],
   "routes": [
+    {
+      "from": "SZX",
+      "to": "ICN",
+      "amount": 1200,
+      "orders": 8
+    },
     {
       "from": "ICN",
       "to": "SZX",
-      "amount": 2210,
-      "orders": 14
+      "amount": 1130,
+      "orders": 7
     },
     {
-      "from": "PKX",
-      "to": "SVO",
-      "amount": 2100,
-      "orders": 4
+      "from": "SHA",
+      "to": "XMN",
+      "amount": 1820,
+      "orders": 10
     },
     {
-      "from": "URC",
-      "to": "XIY",
-      "amount": 2510,
-      "orders": 21
+      "from": "SVO",
+      "to": "PVG",
+      "amount": 795.51,
+      "orders": 2
     },
     {
-      "from": "CGK",
-      "to": "CAN",
-      "amount": 1390,
-      "orders": 9
-    },
-    {
-      "from": "CAN",
-      "to": "CGK",
-      "amount": 1180,
-      "orders": 6
+      "from": "SVO",
+      "to": "MMK",
+      "amount": 746.07,
+      "orders": 2
     }
   ],
-  "metrics": {
-    "cumulative": 13730000,
-    "avgSettleSec": 2,
-    "confirmBlocks": 1,
-    "settledRoutes": 4118,
-    "refundRate": 0
-  },
   "destinations": [
     {
       "key": "cn",
-      "share": 94.5
+      "share": 95.5
     },
     {
       "key": "ru",
-      "share": 3.4
-    },
-    {
-      "key": "id",
-      "share": 0.9
+      "share": 2.3
     },
     {
       "key": "kr",
-      "share": 0.6
+      "share": 0.9
     },
     {
-      "key": "other",
+      "key": "id",
+      "share": 0.7
+    },
+    {
+      "key": "us",
+      "share": 0.4
+    },
+    {
+      "key": "am",
       "share": 0.2
     },
     {
-      "key": "my",
-      "share": 0.1
-    },
-    {
-      "key": "vn",
-      "share": 0.1
+      "key": "other",
+      "share": 0
     }
   ],
+  "metrics": {
+    "cumulative": 13860000,
+    "avgSettleSec": 2,
+    "confirmBlocks": 1,
+    "settledRoutes": 4125,
+    "refundRate": 0
+  },
   "airports": {
-    "ICN": {
-      "lat": 37.46,
-      "lon": 126.44,
+    "PVG": {
+      "lat": 31.14,
+      "lon": 121.81,
       "city": {
-        "en": "Seoul",
-        "zh": "首尔"
-      }
+        "en": "Shanghai",
+        "zh": "上海"
+      },
+      "cc": "CN"
+    },
+    "SHA": {
+      "lat": 31.2,
+      "lon": 121.34,
+      "city": {
+        "en": "Shanghai",
+        "zh": "上海"
+      },
+      "cc": "CN",
+      "minor": true
     },
     "SZX": {
       "lat": 22.64,
@@ -249,64 +283,8 @@ export default {
       "city": {
         "en": "Shenzhen",
         "zh": "深圳"
-      }
-    },
-    "PKX": {
-      "lat": 39.51,
-      "lon": 116.41,
-      "city": {
-        "en": "Beijing",
-        "zh": "北京"
-      }
-    },
-    "SVO": {
-      "lat": 55.97,
-      "lon": 37.41,
-      "city": {
-        "en": "Moscow",
-        "zh": "莫斯科"
-      }
-    },
-    "VKO": {
-      "lat": 55.59,
-      "lon": 37.26,
-      "city": {
-        "en": "Moscow",
-        "zh": "莫斯科"
       },
-      "minor": true
-    },
-    "LED": {
-      "lat": 59.8,
-      "lon": 30.26,
-      "city": {
-        "en": "St. Petersburg",
-        "zh": "圣彼得堡"
-      }
-    },
-    "URC": {
-      "lat": 43.9,
-      "lon": 87.47,
-      "city": {
-        "en": "Urumqi",
-        "zh": "乌鲁木齐"
-      }
-    },
-    "XIY": {
-      "lat": 34.45,
-      "lon": 108.75,
-      "city": {
-        "en": "Xi'an",
-        "zh": "西安"
-      }
-    },
-    "CGK": {
-      "lat": -6.13,
-      "lon": 106.66,
-      "city": {
-        "en": "Jakarta",
-        "zh": "雅加达"
-      }
+      "cc": "CN"
     },
     "CAN": {
       "lat": 23.39,
@@ -315,7 +293,117 @@ export default {
         "en": "Guangzhou",
         "zh": "广州"
       },
+      "cc": "CN",
       "minor": true
+    },
+    "PKX": {
+      "lat": 39.51,
+      "lon": 116.41,
+      "city": {
+        "en": "Beijing",
+        "zh": "北京"
+      },
+      "cc": "CN"
+    },
+    "XIY": {
+      "lat": 34.45,
+      "lon": 108.75,
+      "city": {
+        "en": "Xi'an",
+        "zh": "西安"
+      },
+      "cc": "CN"
+    },
+    "TFU": {
+      "lat": 30.31,
+      "lon": 104.44,
+      "city": {
+        "en": "Chengdu",
+        "zh": "成都"
+      },
+      "cc": "CN"
+    },
+    "HIA": {
+      "lat": 33.79,
+      "lon": 119.13,
+      "city": {
+        "en": "Huai'an",
+        "zh": "淮安"
+      },
+      "cc": "CN",
+      "minor": true
+    },
+    "XMN": {
+      "lat": 24.54,
+      "lon": 118.13,
+      "city": {
+        "en": "Xiamen",
+        "zh": "厦门"
+      },
+      "cc": "CN"
+    },
+    "URC": {
+      "lat": 43.9,
+      "lon": 87.47,
+      "city": {
+        "en": "Urumqi",
+        "zh": "乌鲁木齐"
+      },
+      "cc": "CN"
+    },
+    "ICN": {
+      "lat": 37.46,
+      "lon": 126.44,
+      "city": {
+        "en": "Seoul",
+        "zh": "首尔"
+      },
+      "cc": "KR"
+    },
+    "SVO": {
+      "lat": 55.97,
+      "lon": 37.41,
+      "city": {
+        "en": "Moscow",
+        "zh": "莫斯科"
+      },
+      "cc": "RU"
+    },
+    "MMK": {
+      "lat": 68.78,
+      "lon": 32.75,
+      "city": {
+        "en": "Murmansk",
+        "zh": "摩尔曼斯克"
+      },
+      "cc": "RU"
+    },
+    "LED": {
+      "lat": 59.8,
+      "lon": 30.26,
+      "city": {
+        "en": "St. Petersburg",
+        "zh": "圣彼得堡"
+      },
+      "cc": "RU"
+    },
+    "EVN": {
+      "lat": 40.15,
+      "lon": 44.4,
+      "city": {
+        "en": "Yerevan",
+        "zh": "埃里温"
+      },
+      "cc": "AM"
+    },
+    "CGK": {
+      "lat": -6.13,
+      "lon": 106.66,
+      "city": {
+        "en": "Jakarta",
+        "zh": "雅加达"
+      },
+      "cc": "ID"
     },
     "KUL": {
       "lat": 2.75,
@@ -323,39 +411,26 @@ export default {
       "city": {
         "en": "Kuala Lumpur",
         "zh": "吉隆坡"
-      }
+      },
+      "cc": "MY"
     },
-    "KWE": {
-      "lat": 26.54,
-      "lon": 106.8,
+    "SIN": {
+      "lat": 1.36,
+      "lon": 103.99,
       "city": {
-        "en": "Guiyang",
-        "zh": "贵阳"
-      }
+        "en": "Singapore",
+        "zh": "新加坡"
+      },
+      "cc": "SG"
     },
-    "JHG": {
-      "lat": 21.97,
-      "lon": 100.76,
+    "BKK": {
+      "lat": 13.69,
+      "lon": 100.75,
       "city": {
-        "en": "Xishuangbanna",
-        "zh": "西双版纳"
-      }
-    },
-    "PVG": {
-      "lat": 31.14,
-      "lon": 121.81,
-      "city": {
-        "en": "Shanghai",
-        "zh": "上海"
-      }
-    },
-    "CTU": {
-      "lat": 30.58,
-      "lon": 103.95,
-      "city": {
-        "en": "Chengdu",
-        "zh": "成都"
-      }
+        "en": "Bangkok",
+        "zh": "曼谷"
+      },
+      "cc": "TH"
     },
     "HKG": {
       "lat": 22.31,
@@ -364,23 +439,8 @@ export default {
         "en": "Hong Kong",
         "zh": "香港"
       },
+      "cc": "HK",
       "minor": true
-    },
-    "SIN": {
-      "lat": 1.36,
-      "lon": 103.99,
-      "city": {
-        "en": "Singapore",
-        "zh": "新加坡"
-      }
-    },
-    "BKK": {
-      "lat": 13.69,
-      "lon": 100.75,
-      "city": {
-        "en": "Bangkok",
-        "zh": "曼谷"
-      }
     },
     "NRT": {
       "lat": 35.77,
@@ -388,7 +448,8 @@ export default {
       "city": {
         "en": "Tokyo",
         "zh": "东京"
-      }
+      },
+      "cc": "JP"
     },
     "DXB": {
       "lat": 25.25,
@@ -396,7 +457,8 @@ export default {
       "city": {
         "en": "Dubai",
         "zh": "迪拜"
-      }
+      },
+      "cc": "AE"
     },
     "LHR": {
       "lat": 51.47,
@@ -404,7 +466,8 @@ export default {
       "city": {
         "en": "London",
         "zh": "伦敦"
-      }
+      },
+      "cc": "GB"
     },
     "CDG": {
       "lat": 49.01,
@@ -412,15 +475,8 @@ export default {
       "city": {
         "en": "Paris",
         "zh": "巴黎"
-      }
-    },
-    "LAX": {
-      "lat": 33.94,
-      "lon": -118.41,
-      "city": {
-        "en": "Los Angeles",
-        "zh": "洛杉矶"
-      }
+      },
+      "cc": "FR"
     },
     "JFK": {
       "lat": 40.64,
@@ -428,7 +484,35 @@ export default {
       "city": {
         "en": "New York",
         "zh": "纽约"
-      }
+      },
+      "cc": "US"
+    },
+    "LAX": {
+      "lat": 33.94,
+      "lon": -118.41,
+      "city": {
+        "en": "Los Angeles",
+        "zh": "洛杉矶"
+      },
+      "cc": "US"
+    },
+    "SEA": {
+      "lat": 47.45,
+      "lon": -122.31,
+      "city": {
+        "en": "Seattle",
+        "zh": "西雅图"
+      },
+      "cc": "US"
+    },
+    "SYD": {
+      "lat": -33.94,
+      "lon": 151.18,
+      "city": {
+        "en": "Sydney",
+        "zh": "悉尼"
+      },
+      "cc": "AU"
     }
   },
   "hubs": {},
@@ -467,7 +551,7 @@ export default {
     ],
     [
       "ICN",
-      "LAX"
+      "SEA"
     ],
     [
       "SZX",
@@ -475,7 +559,7 @@ export default {
     ],
     [
       "SIN",
-      "DXB"
+      "SYD"
     ],
     [
       "CDG",
@@ -492,6 +576,18 @@ export default {
     [
       "PVG",
       "NRT"
+    ],
+    [
+      "SEA",
+      "JFK"
+    ],
+    [
+      "LAX",
+      "JFK"
+    ],
+    [
+      "SIN",
+      "DXB"
     ]
   ]
 };

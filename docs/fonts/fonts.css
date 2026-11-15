@@ -8,3 +8,6 @@
 @font-face{font-family:'Chakra Petch';font-weight:700;font-style:normal;font-display:swap;src:url(../fonts/ChakraPetch-700.woff2) format('woff2');}
 @font-face{font-family:'DSEG7';font-weight:400;font-style:normal;font-display:block;src:url(../fonts/DSEG7Classic-Regular.woff2) format('woff2');}
 @font-face{font-family:'DSEG7M';font-weight:400;font-style:normal;font-display:block;src:url(../fonts/DSEG7Modern-Regular.woff2) format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/IBMPlexMono-400.woff2) format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-weight:500;font-style:normal;font-display:swap;src:url(../fonts/IBMPlexMono-500.woff2) format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-weight:600;font-style:normal;font-display:swap;src:url(../fonts/IBMPlexMono-600.woff2) format('woff2');}

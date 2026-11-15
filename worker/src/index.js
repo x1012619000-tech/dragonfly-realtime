@@ -83,7 +83,7 @@ async function snapshot(env) {
 
 /* Ingest body:
  *   { ...partial snapshot... }                       deep-merged into stored data
- *   { "append": { "feed": [rows], "ticker": [rows] } } rows are prepended (newest first), trimmed to 50
+ *   { "append": { "feed": [rows] } } rows are prepended (newest first), trimmed to 50
  *   ?mode=replace                                     replace stored data entirely
  */
 async function ingest(req, env) {
@@ -98,14 +98,27 @@ async function ingest(req, env) {
   cur = deepMerge(cur, rest);
   if (isObj(append)) {
     if (Array.isArray(append.feed)) cur.feed = [...append.feed, ...(cur.feed || SEED.feed)].slice(0, MAX_ROWS);
-    if (Array.isArray(append.ticker)) {
-      const sc = cur.supplyChain || {};
-      cur.supplyChain = { ...sc, ticker: [...append.ticker, ...(sc.ticker || SEED.supplyChain.ticker)].slice(0, MAX_ROWS) };
-    }
   }
   cur.meta = { ...(cur.meta || {}), ingestedAt: new Date().toISOString() };
   await saveIngest(env, cur);
   return json(env, { ok: true, stored: env.DFLY_KV ? "kv" : "memory", keys: Object.keys(cur) });
+}
+
+
+/* Optional proxies for the Liquidity Proof search and the Daily Commitment "Verify root" button.
+   Point the frontend config lookupApi / verifyApi at these routes once LOOKUP_UPSTREAM / VERIFY_UPSTREAM are set.
+   Without an upstream they answer 501 so the dashboard shows its "API not connected" state. */
+async function proxy(req, env, upstream, allowed) {
+  if (!upstream) return json(env, { ok: false, error: "not configured" }, 501);
+  const inUrl = new URL(req.url), out = new URL(upstream);
+  for (const k of allowed) { const v = inUrl.searchParams.get(k); if (v != null) out.searchParams.set(k, v.slice(0, 200)); }
+  const headers = { Accept: "application/json" };
+  if (env.UPSTREAM_AUTH) headers.Authorization = env.UPSTREAM_AUTH;
+  try {
+    const r = await fetch(out.toString(), { headers, cf: { cacheTtl: 0 } });
+    const body = await r.text();
+    return new Response(body, { status: r.status, headers: { "Content-Type": "application/json; charset=utf-8", ...cors(env) } });
+  } catch (e) { return json(env, { ok: false, error: "upstream error" }, 502); }
 }
 
 export default {
@@ -114,8 +127,10 @@ export default {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(env) });
     if (url.pathname === "/api/snapshot" && req.method === "GET") return json(env, await snapshot(env));
     if (url.pathname === "/api/ingest" && req.method === "POST") return ingest(req, env);
+    if (url.pathname === "/api/lookup" && req.method === "GET") return proxy(req, env, env.LOOKUP_UPSTREAM, ["q", "type"]);
+    if (url.pathname === "/api/verify-root" && req.method === "GET") return proxy(req, env, env.VERIFY_UPSTREAM, ["root", "block"]);
     if (url.pathname === "/api/health") return json(env, { ok: true, kv: !!env.DFLY_KV, time: new Date().toISOString() });
-    if (url.pathname === "/" ) return json(env, { name: "dragonfly-realtime-api", endpoints: ["GET /api/snapshot", "POST /api/ingest", "GET /api/health"] });
+    if (url.pathname === "/" ) return json(env, { name: "dragonfly-realtime-api", endpoints: ["GET /api/snapshot", "POST /api/ingest", "GET /api/lookup", "GET /api/verify-root", "GET /api/health"] });
     return json(env, { ok: false, error: "not found" }, 404);
   },
 };

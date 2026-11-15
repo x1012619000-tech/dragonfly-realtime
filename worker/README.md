@@ -1,6 +1,6 @@
 # Dragonfly Real-time data — Cloudflare Worker (not deployed yet / 尚未部署)
 
-Serves `GET /api/snapshot` (CORS), `POST /api/ingest` (Bearer token), `GET /api/health`. Schema: see `../API.md`.
+Serves `GET /api/snapshot` (CORS), `POST /api/ingest` (Bearer token), `GET /api/lookup` + `GET /api/verify-root` (proxies, 501 until `LOOKUP_UPSTREAM` / `VERIFY_UPSTREAM` are set), `GET /api/health`. Schema: see `../API.md`.
 
 ## What you need / 需要准备
 1. A Cloudflare account (free plan is enough). 一个 Cloudflare 账号（免费版即可）
@@ -22,6 +22,7 @@ Then set `api` in `docs/js/config.js` to `https://dragonfly-realtime-api.<subdom
 ## Connect real data / 接入真实数据
 - **Pull**: set `UPSTREAM_URLS` in `wrangler.toml` `[vars]` (JSON map), optional secret `UPSTREAM_AUTH` (sent as `Authorization`).
 - **Push**: your backend calls `POST /api/ingest` with `Authorization: Bearer <INGEST_TOKEN>`.
+- **Lookup / verify**: set `LOOKUP_UPSTREAM` / `VERIFY_UPSTREAM`, then in `docs/js/config.js` set `lookupApi: "https://…workers.dev/api/lookup"`, `verifyApi: "https://…workers.dev/api/verify-root"`, and `officialWallet`.
 - Production: set `ALLOW_ORIGIN = "https://x1012619000-tech.github.io"`.
 
 ## Local test / 本地测试

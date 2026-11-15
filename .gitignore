@@ -4,3 +4,4 @@ shoot.mjs
 node_modules/
 .wrangler/
 .dev.vars
+shoot-live.mjs

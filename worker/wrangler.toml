@@ -6,6 +6,8 @@ compatibility_date = "2026-11-01"
 ALLOW_ORIGIN = "*"          # tighten to "https://x1012619000-tech.github.io" in production
 CACHE_TTL = "10"
 # UPSTREAM_URLS = '{"*":"https://your-backend.example.com/dragonfly/snapshot"}'
+# LOOKUP_UPSTREAM = "https://your-backend.example.com/dragonfly/lookup"        # backs GET /api/lookup?q=&type=
+# VERIFY_UPSTREAM = "https://your-backend.example.com/dragonfly/verify-root"   # backs GET /api/verify-root?root=&block=
 
 # Optional: persist pushed data (POST /api/ingest) across isolates.
 # 1) npx wrangler kv namespace create DFLY_KV   2) paste the id below and uncomment
